@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ImageView"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/padding"
+    android:paddingEnd="@dimen/padding"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/name_textView"
+        style="@style/NameStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/text_name"
+        android:textAlignment="center" />
+
+    <ImageView
+        android:id="@+id/imageViewStar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/btn_star_big_on"
+        android:contentDescription="@string/image_star" />
+
+
+    <ScrollView
+        android:id="@+id/bio_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/bio_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/my_bio"
+            style="@style/NameStyle"
+            android:lineSpacingMultiplier="1.2"
+            />
+    </ScrollView>
+
+
+</LinearLayout>
+
