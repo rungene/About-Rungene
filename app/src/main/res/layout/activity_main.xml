@@ -18,6 +18,15 @@
         android:text="@string/text_name"
         android:textAlignment="center" />
 
+    <EditText
+        android:id="@+id/textNickName"
+        style="@style/NameStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/nick_name"
+        android:inputType="textPersonName"
+        android:textAlignment="center" />
+
     <ScrollView
         android:id="@+id/bio_scroll"
         android:layout_width="match_parent"
@@ -42,7 +51,6 @@
                 android:layout_height="wrap_content"
                 android:lineSpacingMultiplier="1.2"
                 android:text="@string/my_bio" />
-
 
         </LinearLayout>
 
