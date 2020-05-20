@@ -17,11 +17,13 @@ import kotlinx.android.synthetic.main.activity_main.*
 class MainActivity : AppCompatActivity() {
 
     private lateinit var bidding: ActivityMainBinding
+    private var myName: MyName = MyName("Rungene Clevers")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        bidding =DataBindingUtil.setContentView(this,R.layout.activity_main)
+        bidding = DataBindingUtil.setContentView(this, R.layout.activity_main)
+        bidding.myName =myName
 
 
 
@@ -34,11 +36,11 @@ class MainActivity : AppCompatActivity() {
     private fun addNickName(view: View) {
 
         bidding.apply {
-            textViewNickName.text = bidding.editTextNickName.text
+            myName?.nickName = editTextNickName.text.toString()
             invalidateAll()
-            editTextNickName.visibility= View.GONE
+            editTextNickName.visibility = View.GONE
             buttonDone.visibility = View.GONE
-            textViewNickName.visibility=View.VISIBLE
+            textViewNickName.visibility = View.VISIBLE
         }
 
 
